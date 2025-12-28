@@ -11,11 +11,11 @@
     <a href="https://waleedgis.users.earthengine.app/view/gfsm"><strong>Launch GEE App »</strong></a>
     <br />
     <br />
-    <a href="#-methodology">Methodology</a>
+    <a href="#methodology">Methodology</a>
     ·
-    <a href="#-citation">Citation</a>
+    <a href="#citation">Citation</a>
     ·
-    <a href="#-contact">Contact Author</a>
+    <a href="#author--contact">Contact Author</a>
   </p>
 
   <p align="center">

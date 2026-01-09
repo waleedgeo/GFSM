@@ -66,7 +66,7 @@ Developed using a **Gradient-Boosted Tree (XGBoost)** machine learning framework
 Visualize and inspect the global dataset interactively using our Google Earth Engine web application. The app features smart-resolution switching and a click-to-inspect tool for detailed regional analytics.
 
 <div align="center">
-  <a href="https://waleedgis.users.earthengine.app/view/gfsm">
+  <a href="https://gfsm.waleedgeo.com">
     <img src="src/img/gfsm_webapp.png" alt="GFSM App Interface" width="100%" style="border-radius: 10px; border: 1px solid #ddd;">
   </a>
 </div>
@@ -157,11 +157,8 @@ The complete GFSM v1 dataset has been archived on Zenodo with a permanent DOI. T
 
 The Zenodo archive contains:
 - **Global GeoTIFF tiles** at 30m resolution
-- **Training samples** used for model development (~30M points)
-- **Validation datasets** for performance assessment
 - **Metadata** and documentation for all layers
-- **Model performance metrics** by geographic unit
-- **Processing scripts** for reproducibility (coming soon)
+- **Global Tiles Index Grid** Allowing users to identify and download specific regions
 
 ### Access Methods
 

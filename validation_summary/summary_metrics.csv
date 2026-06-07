@@ -1,0 +1,11 @@
+statistic,value,interpretation_note
+Spatial tiles,"17,069","Number of processed global tiles used for near-global 30 m GFSM generation."
+Modeling units,"192","Country or country-climate units used for regionalized model training and prediction."
+Training samples,"~30.45 million","Stratified, tile-balanced flood/non-flood samples used for model development."
+Output resolution,"30 m","Final GFSM output grid resolution; training labels were derived from coarser hazard layers."
+Output format,"Five-class EI-5 GeoTIFF tiles","Classes represent Very Low, Low, Moderate, High, and Very High susceptibility."
+Training label source,"Aqueduct Flood Hazard Maps v2, 5-year baseline","Model-derived riverine/coastal flood labels, not direct flood observations."
+Median ROC-AUC,"~0.95","Internal held-out model-label discrimination across modelling units."
+Median AUPRC,"~0.94","Precision-recall performance under the sampled-label distribution."
+DFO correspondence,"79% within 5 km; 92% within 10 km","Main independent event-based plausibility result using DFO flood-event locations."
+Larger-buffer sensitivity,"Near saturation at 20-50 km","Used only as sensitivity analysis because large buffers may overstate agreement."

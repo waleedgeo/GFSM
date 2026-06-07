@@ -1,4 +1,44 @@
+# Local planning files
+project.md
+
+# Large geospatial data
+*.tif
+*.tiff
+*.vrt
+*.gpkg
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.zip
+*.7z
+*.tar
+*.gz
+*.npz
+*.npy
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs/temp
+*.log
+tmp/
+temp/
+
+# Local/private working folders
 /untractk_data/
 /other/
-
-

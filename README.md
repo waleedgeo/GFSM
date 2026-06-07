@@ -1,273 +1,231 @@
 <div align="center">
-  <a href="https://waleedgis.users.earthengine.app/view/gfsm">
-    <img src="src/img/gfsm_logo_500px.png" alt="GFSM Logo" width="180" height="180">
-  </a>
-
-  <h1 align="center">Global Flood Susceptibility Map (GFSM v1)</h1>
-  <p align="center">
-    <strong>A High-Resolution (30m) Global Dataset Derived from Multi-Source Geospatial Data</strong>
-    <br />
-    <br />
-    <a href="https://waleedgis.users.earthengine.app/view/gfsm"><strong>Launch GEE App »</strong></a>
-    <br />
-    <br />
-    <a href="#overview">Overview</a>
-    ·
-    <a href="#gfsm-explorer-app">Explorer App</a>
-    ·
-    <a href="#-dataset-access">Dataset Access</a>
-    ·
-    <a href="#-citation">Citation</a>
-    ·
-    <a href="#author--contact">Contact</a>
-  </p>
-
-  <p align="center">
-    <img src="https://img.shields.io/badge/Status-Under%20Review-orange?style=flat-square&logo=gitbook" alt="Status">
-    <img src="https://img.shields.io/badge/Resolution-30m-blue?style=flat-square&logo=googleearth" alt="Resolution">
-    <img src="https://img.shields.io/badge/Platform-Google%20Earth%20Engine-green?style=flat-square&logo=google" alt="GEE">
-    <a href="https://doi.org/10.5281/zenodo.18137662">
-      <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18137662-blue?style=flat-square&logo=zenodo" alt="DOI">
-    </a>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-      <img src="https://img.shields.io/badge/License-CC%20BY--NC%20SA%204.0-lightgrey?style=flat-square&logo=creativecommons" alt="License">
-    </a>
-  </p>
-</div>
-
-<br />
-
-## Overview
-
-**GFSM v1** is the first globally harmonized flood susceptibility dataset produced at a native **30-meter spatial resolution**. Unlike traditional hazard models that rely on hydrodynamic simulations for specific return periods (e.g., 1-in-100 years), GFSM identifies the landscape's inherent propensity for flooding based on physical geographic and environmental controls.
-
-Developed using a **Gradient-Boosted Tree (XGBoost)** machine learning framework, the model integrates topographic, hydrological, meteorological, and anthropogenic factors trained on over **30 million samples** across **192 distinct climate zones** and processed over **10,000 GB of high-resolution satellite data**.
-
-### 🎯 Why GFSM?
-
-- **First-of-its-kind:** Global harmonized susceptibility at 30m resolution
-- **Data-rich foundation:** Trained on extensive multi-source geospatial datasets
-- **Climate-aware:** Accounts for diverse climatic and geographic contexts
-- **Actionable insights:** Suitable for regional planning, exposure assessment, and risk screening
-- **Open science:** Data and methodology made available to the research community
-
-> **📢 Project Status**
->
-> The manuscript describing this dataset is currently **under review** at *Nature Scientific Data*. The dataset has been published on Zenodo (currently restricted) and will be made publicly available immediately following manuscript acceptance.
->
-> **Dataset DOI:** [10.5281/zenodo.18137662](https://doi.org/10.5281/zenodo.18137662)
-
-> 📧 For early access to specific tiles or training samples for validation purposes, please [contact the author](#author--contact) directly.
-
----
-
-## GFSM Explorer App
-
-Visualize and inspect the global dataset interactively using our Google Earth Engine web application. The app features smart-resolution switching and a click-to-inspect tool for detailed regional analytics.
-
-<div align="center">
   <a href="https://gfsm.waleedgeo.com">
-    <img src="src/img/gfsm_webapp.png" alt="GFSM App Interface" width="100%" style="border-radius: 10px; border: 1px solid #ddd;">
+    <img src="src/img/gfsm_logo_500px.png" alt="GFSM logo" width="150">
   </a>
+
+  <h1>Global Flood Susceptibility Map (GFSM v1)</h1>
+
+  <p>
+    <strong>A globally harmonized 30 m flood susceptibility dataset built from multi-source Earth observation and geospatial data.</strong>
+  </p>
+
+  <p>
+    <a href="https://gfsm.waleedgeo.com"><strong>Open GFSM Explorer</strong></a>
+    ·
+    <a href="https://doi.org/10.5281/zenodo.20568218"><strong>Zenodo DOI</strong></a>
+    ·
+    <a href="data_access/gee_quickstart.js"><strong>GEE quickstart</strong></a>
+    ·
+    <a href="examples/read_gfsm_tile_python.py"><strong>Python examples</strong></a>
+  </p>
+
+  <p>
+    <a href="https://doi.org/10.5281/zenodo.20568218">
+      <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20568218-blue?style=flat-square&logo=zenodo" alt="Zenodo DOI">
+    </a>
+    <img src="https://img.shields.io/badge/Resolution-30%20m-2563eb?style=flat-square" alt="30 m resolution">
+    <img src="https://img.shields.io/badge/Tiles-17%2C069-0f766e?style=flat-square" alt="17,069 tiles">
+    <img src="https://img.shields.io/badge/GEE-ImageCollection-16a34a?style=flat-square&logo=googleearth" alt="Google Earth Engine ImageCollection">
+    <img src="https://img.shields.io/badge/License-CC%20BY%204.0%20%2B%20MIT-6b7280?style=flat-square" alt="CC BY 4.0 and MIT license">
+  </p>
 </div>
 
-> Click the image above to launch the app.
-
-### Key App Capabilities:
-* **Global Screening:** Rapidly visualize susceptibility patterns from global to local scales.
-* **Resolution Toggling:** Switch between 1km overview layers and native 30m analysis layers.
-* **Unit Inspector:** Click any location to view specific model performance metrics (AUC, F1-Score) for that region (coming soon).
-
-
 ---
 
-## ✨ Key Features
+<p align="center">
+  <a href="https://gfsm.waleedgeo.com">
+    <img src="src/img/gfsm_webapp.png" alt="GFSM Explorer application screenshot" width="100%">
+  </a>
+</p>
 
-### Coverage & Resolution
-* 🌍 **Global Coverage:** Spans all inhabited landmasses from ~80°N to ~60°S
-* 🎯 **High Precision:** Native 30m resolution for localized exposure assessment and infrastructure planning
-* 📊 **Comprehensive Training:** Built on ~17,000 grid tiles across diverse geographic regions
+## What GFSM Provides
 
-### Technical Excellence
-* 🤖 **Advanced ML Framework:** Gradient-Boosted Trees (XGBoost) optimized for geospatial prediction
-* 🧪 **Robust Validation:** Global median AUC of **~0.95** across diverse terrains
-* 🌐 **Climate-Aware:** Model trained across 192 distinct Köppen-Geiger climate zones
+GFSM v1 maps relative flood susceptibility at 30 m resolution using five globally consistent classes. It is designed for dataset access, regional screening, visualization, clipping, and lightweight reproducible summaries.
 
-### Input Variables (9 Flood Conditioning Factors)
+This repository provides documentation, metadata, access instructions, compact validation metrics, Google Earth Engine scripts, Python examples, and minimal notebooks. Downstream flood-risk assessment with exposure and vulnerability layers is outside the scope of this repository.
 
-| Category | Variables | Data Source |
-|----------|-----------|-------------|
-| **Topographic** | Elevation, Slope, Aspect | FABDEM (30m) |
-| **Hydrological** | HAND, TWI, Distance to Water | Derived from MERIT-Hydro |
-| **Anthropogenic** | Distance to Roads, NDVI | OpenStreetMap, Sentinel-2 |
-| **Climate** | Rainfall Frequency | GPM IMERG |
+## Access
 
----
+| Resource | Identifier |
+| --- | --- |
+| Web app | https://gfsm.waleedgeo.com |
+| Zenodo dataset DOI | https://doi.org/10.5281/zenodo.20568218 |
+| Google Earth Engine asset | `projects/floodsus/assets/fsm_ei5` |
 
-## Methodology
+The Earth Engine asset is an `ImageCollection` containing approximately 17,000 GFSM 30 m tile images. The Zenodo record is the canonical dataset archive.
 
-The generation of GFSM v1 followed a rigorous, high-performance computing workflow (involving distributed computing and advanced machine learning techniques on [SHAHEEN-III](https://www.kaust.edu.sa/en/research/shaheen) and [Google Earth Engine](https://earthengine.google.com/)). Details will be updated upon manuscript acceptance, but feel free to [reach out](#author--contact) for preliminary insights.
+## At a Glance
 
-### Susceptibility Classes
+| Attribute | GFSM v1 |
+| --- | --- |
+| Output product | Five-class EI-5 GeoTIFF tiles |
+| Spatial resolution | 30 m |
+| Spatial tiles | 17,069 processed global tiles |
+| Modelling units | 192 country or country-climate units |
+| Training samples | Approximately 30.45 million |
+| Training label source | Aqueduct Flood Hazard Maps v2, 5-year baseline |
+| Internal validation | Median ROC-AUC ~0.95; median AUPRC ~0.94 |
+| DFO event correspondence | 79% within 5 km; 92% within 10 km |
+| NoData | 0 = masked or unavailable |
 
-| Class | Level | Description |
-| :---: | :--- | :--- |
-| **1** | **Very Low** | Areas with negligible flood propensity (e.g., high ridges, steep slopes). |
-| **2** | **Low** | Areas with minimal risk factors. |
-| **3** | **Moderate** | Transitional zones with some flood-prone characteristics. |
-| **4** | **High** | Areas with significant flood conditioning factors. |
-| **5** | **Very High** | Critical zones (floodplains, depressions) with maximum propensity. |
+## Class Legend
 
----
+| Value | Class | Color |
+| ---: | --- | --- |
+| 0 | NoData / masked | <img src="https://img.shields.io/badge/NoData-d1d5db?style=flat-square&labelColor=d1d5db&color=d1d5db" alt="NoData color"> |
+| 1 | Very Low | <img src="https://img.shields.io/badge/Very%20Low-2c7bb6?style=flat-square&labelColor=2c7bb6&color=2c7bb6" alt="Very Low color"> |
+| 2 | Low | <img src="https://img.shields.io/badge/Low-abd9e9?style=flat-square&labelColor=abd9e9&color=abd9e9" alt="Low color"> |
+| 3 | Moderate | <img src="https://img.shields.io/badge/Moderate-ffffbf?style=flat-square&labelColor=ffffbf&color=ffffbf" alt="Moderate color"> |
+| 4 | High | <img src="https://img.shields.io/badge/High-fdae61?style=flat-square&labelColor=fdae61&color=fdae61" alt="High color"> |
+| 5 | Very High | <img src="https://img.shields.io/badge/Very%20High-d7191c?style=flat-square&labelColor=d7191c&color=d7191c" alt="Very High color"> |
 
-## 📂 Repository Structure
+## Quickstart
 
-This repository serves as the official code and documentation hub for the GFSM project.
+### Google Earth Engine
+
+```javascript
+var gfsmCollection = ee.ImageCollection('projects/floodsus/assets/fsm_ei5');
+var gfsm = gfsmCollection.mosaic().select(0).rename('gfsm');
+var validMask = gfsm.gte(1).and(gfsm.lte(5));
+
+var palette = ['2c7bb6', 'abd9e9', 'ffffbf', 'fdae61', 'd7191c'];
+Map.addLayer(gfsm.updateMask(validMask), {min: 1, max: 5, palette: palette}, 'GFSM v1');
+Map.setCenter(90.4, 23.7, 7);
+```
+
+More Earth Engine examples:
+
+| Script | Purpose |
+| --- | --- |
+| [`gee_quickstart.js`](data_access/gee_quickstart.js) | Load and visualize GFSM |
+| [`gee_visualize_gfsm.js`](data_access/gee_visualize_gfsm.js) | Add masked classes and a map legend |
+| [`gee_clip_and_export.js`](data_access/gee_clip_and_export.js) | Clip GFSM to an AOI and export to Drive |
+| [`gee_area_by_class.js`](data_access/gee_area_by_class.js) | Summarize area by susceptibility class |
+
+### Python
+
+```bash
+pip install -r examples/requirements.txt
+python examples/read_gfsm_tile_python.py path/to/GFSM_tile.tif
+python examples/calculate_area_by_class_python.py path/to/GFSM_tile.tif --output area_by_class.csv
+python examples/plot_gfsm_tile_python.py path/to/GFSM_tile.tif --output gfsm_tile.png
+```
+
+Python examples:
+
+| Script | Purpose |
+| --- | --- |
+| [`read_gfsm_tile_python.py`](examples/read_gfsm_tile_python.py) | Print CRS, resolution, bounds, NoData, and class counts |
+| [`calculate_area_by_class_python.py`](examples/calculate_area_by_class_python.py) | Calculate class areas from a tile or clipped raster |
+| [`plot_gfsm_tile_python.py`](examples/plot_gfsm_tile_python.py) | Save a class-colored PNG |
+
+## Repository Map
 
 ```text
 GFSM/
-├── scripts/              # Processing and analysis scripts (Coming soon)
-│   ├── preprocessing/    # Data preparation workflows
-│   ├── modeling/         # XGBoost training pipelines
-│   └── inference/        # GEE-based prediction scripts
-├── src/
-│   ├── img/              # Visual assets (Logo, screenshots, diagrams)
-│   └── docs/             # Additional documentation (Coming soon)
-├── other/
-│   └── sorting_zenodo/   # Utilities for dataset management
-├── LICENSE               # CC BY-NC-SA 4.0 License
-└── README.md             # Project documentation (this file)
+├── data_access/          # Zenodo, tile-index, and Earth Engine examples
+├── metadata/             # Class legend, tile schema, variables, scope
+├── examples/             # Lightweight Python scripts
+├── notebooks/            # Minimal local-tile notebooks
+├── validation_summary/   # Manuscript-reported summary metrics
+├── docs/                 # Citation, limitations, FAQ, changelog
+├── src/img/              # Logo and app screenshot
+├── CITATION.cff
+├── LICENSE
+└── README.md
 ```
 
-> **Note:** Full processing scripts, training pipelines, and documentation will be released upon manuscript acceptance to ensure reproducibility.
+## Scope Boundaries
 
----
+Included:
 
-## 📦 Dataset Access
+- Dataset access and citation guidance.
+- Google Earth Engine visualization, clipping, export, and class-area examples.
+- Python examples for local GeoTIFF tiles.
+- Class legend, tile schema, variable definitions, and compact validation summary.
+- Responsible-use and limitation notes.
 
-The complete GFSM v1 dataset has been archived on Zenodo with a permanent DOI. The dataset is currently **restricted** and will be made **publicly available** immediately upon manuscript acceptance.
+Not included:
 
-### Zenodo Repository
+- Exposure or vulnerability integration workflows.
+- Population, asset, or infrastructure overlay analysis.
+- Country rankings, hotspot rankings, damage estimates, or risk scores.
+- Draft material for downstream GFSM-based flood-risk assessment studies.
 
-**Citation:** Waleed, M. (2026). Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source geospatial data (Version V1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.18137662
+## Validation Summary
 
-**DOI:** [10.5281/zenodo.18137662](https://doi.org/10.5281/zenodo.18137662)
+The compact validation table in [`validation_summary/summary_metrics.csv`](validation_summary/summary_metrics.csv) reports the manuscript-level metrics intended for public reference. Internal ROC-AUC and AUPRC values describe discrimination against model-derived labels. DFO correspondence values provide independent event-based plausibility context.
 
-### What's Included
+## Responsible Use
 
-The Zenodo archive contains:
-- **Global GeoTIFF tiles** at 30m resolution
-- **Metadata** and documentation for all layers
-- **Global Tiles Index Grid** Allowing users to identify and download specific regions
+GFSM is a susceptibility baseline, not a real-time flood forecast or event-specific inundation model. Use it for broad screening and comparative geospatial analysis, and combine it with local observations, flood-defense information, drainage infrastructure, engineering knowledge, and jurisdiction-specific planning guidance where possible.
 
-### Access Methods
+See [`docs/known_limitations.md`](docs/known_limitations.md) and [`docs/faq.md`](docs/faq.md) for more detail.
 
-| Method | Status | Description |
-|--------|--------|-------------|
-| **Zenodo Direct Download** | 🔒 Restricted | Full dataset archive (Available post-publication) |
-| **GEE Explorer App** | ✅ Live | Interactive visualization and inspection |
-| **GEE Asset** | 🔜 Coming Soon | Programmatic access via Earth Engine API |
-| **Early Access Request** | 📧 Available | Contact author for research purposes |
+## Citation
 
----
+If you use GFSM v1, cite both the dataset DOI and the manuscript when available.
 
-## 🗺️ Roadmap & Development Status
+Dataset citation:
 
-| Feature | Status | Timeline |
-|---------|--------|----------|
-| **GFSM Explorer (v1)** | ✅ Live | Available Now |
-| **Zenodo Dataset Publication** | 🔒 Restricted | Published, opens upon acceptance |
-| **Manuscript Publication** | 📝 Under Review | Submitted to *Nature Scientific Data* |
-| **Public Dataset Download** | 🔜 Pending | Release upon acceptance |
-| **GEE Asset (Public)** | 🔜 Pending | Release upon acceptance |
-| **Processing Scripts** | 🔜 Pending | Release upon acceptance |
-| **GFSM Toolbox (v2)** | 🚧 In Development | Q2 2026 (post-publication) |
-| **API Integration** | 💡 Planned | Future Release |
-
-> **Research Access:** Researchers requiring early access to specific tiles or training samples for validation purposes may [contact the author](#-author--contact) directly with reasonable request.
-
----
-
-## 📖 Citation
-
-If you use GFSM v1 in your research, please cite both the **manuscript** (upon publication) and the **dataset**.
-
-### Primary Citation (Manuscript)
-
-*Details to be updated upon publication*
-
-```bibtex
-@article{waleed2026gfsm,
-  title={Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source geospatial data},
-  author={Waleed, Mirza and Sajjad, Muhammad and Sami, Ghamdi and Meng, Gao},
-  journal={Under Review at Nature Scientific Data},
-  year={2026}
-}
-```
-
-### Dataset Citation
+Waleed, M. (2026). Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20568218
 
 ```bibtex
 @dataset{waleed2026gfsm_data,
   author       = {Waleed, Mirza},
-  title        = {{Global Flood Susceptibility Map (GFSM v1): A high 
-                   resolution (30m) flood susceptibility dataset derived 
-                   from multi-source geospatial data}},
-  month        = jan,
-  year         = 2026,
+  title        = {{Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data}},
+  year         = {2026},
   publisher    = {Zenodo},
   version      = {V1},
-  doi          = {10.5281/zenodo.18137662},
-  url          = {https://doi.org/10.5281/zenodo.18137662}
+  doi          = {10.5281/zenodo.20568218},
+  url          = {https://doi.org/10.5281/zenodo.20568218}
 }
 ```
 
-### Related Publications
+Manuscript citation placeholder:
 
-The methodology builds upon these foundational works:
+```bibtex
+@article{waleed2026gfsm,
+  title   = {Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data},
+  author  = {Waleed, Mirza and Sajjad, Muhammad and Al-Ghamdi, Sami G. and Gao, Meng},
+  journal = {Nature Scientific Data},
+  year    = {2026},
+  note    = {Manuscript under review}
+}
+```
+
+Machine-readable citation metadata is provided in [`CITATION.cff`](CITATION.cff).
+
+## Related Work
+
+GFSM builds on recent flood susceptibility mapping and scalable GeoAI work:
 
 - Waleed, M., & Sajjad, M. (2025). High-resolution flood susceptibility mapping and exposure assessment in Pakistan: An integrated artificial intelligence, machine learning and geospatial framework. *International Journal of Disaster Risk Reduction*, 121, 105442. https://doi.org/10.1016/j.ijdrr.2025.105442
-
 - Waleed, M., & Sajjad, M. (2025). Advancing flood susceptibility prediction: A comparative assessment and scalability analysis of machine learning algorithms via artificial intelligence in high-risk regions of Pakistan. *Journal of Flood Risk Management*, 18(1), e13047. https://doi.org/10.1111/jfr3.13047
 
----
+## License
 
-## Author & Contact
-**Mirza Waleed**
-<br />
-*GeoAI & Environmental Risk Researcher*
+Unless otherwise noted, GFSM data, metadata, and documentation are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). Code examples in this repository are licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
-* **Website:** [waleedgeo.com](https://waleedgeo.com)
-* **Email:** [waleedgeo@outlook.com](mailto:waleedgeo@outlook.com)
-* **LinkedIn:** [Mirza Waleed](https://www.linkedin.com/in/waleedgeo)
-* **GitHub:** [@waleedgeo](https://github.com/waleedgeo)
+## Project Contact
 
-Co-Authors: [Sajjad Muhammad](https://orcid.org/0000-0002-1576-1342) | [Sami G. Al-Ghamdi](https://orcid.org/0000-0002-7416-5153) | [Meng Gao](https://orcid.org/0000-0002-8657-3541)
+<div align="center">
+  <h3>Mirza Waleed</h3>
+  <p><strong>GeoAI, flood susceptibility mapping, and environmental risk research</strong></p>
 
----
+  <p>
+    <a href="https://waleedgeo.com">
+      <img src="https://img.shields.io/badge/Website-waleedgeo.com-0f766e?style=flat-square" alt="Website">
+    </a>
+    <a href="mailto:waleedgeo@outlook.com">
+      <img src="https://img.shields.io/badge/Email-waleedgeo%40outlook.com-2563eb?style=flat-square" alt="Email">
+    </a>
+    <a href="https://github.com/waleedgeo">
+      <img src="https://img.shields.io/badge/GitHub-waleedgeo-111827?style=flat-square&logo=github" alt="GitHub">
+    </a>
+  </p>
 
-
-## 🙏 Acknowledgments
-
-This research was supported by:
-- **Google Earth Engine** platform for massive-scale geospatial processing
-- **SHAHEEN-III supercomputer** at KAUST for distributed computing resources
-- Global open-access datasets: FABDEM, GPM IMERG, Sentinel-2, and others
-
-We thank the reviewers and the scientific community for their valuable feedback.
-
----
-
-## 📄 License
-
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-
-
-<div align="left">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-</a>
+  <p>
+    For dataset access questions, citation updates, or GFSM web-app issues, use the contact links above.
+  </p>
 </div>
-
-Under this license, you are free to share and adapt the material, provided you give appropriate credit, do not use it for commercial purposes, and distribute any derivative works under the same license. For full license details, please visit the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons website</a>.

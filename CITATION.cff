@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use GFSM v1, please cite the dataset DOI and the associated manuscript when available."
+title: "Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data"
+type: dataset
+authors:
+  - family-names: Waleed
+    given-names: Mirza
+  - family-names: Sajjad
+    given-names: Muhammad
+  - family-names: Al-Ghamdi
+    given-names: Sami G.
+  - family-names: Gao
+    given-names: Meng
+version: "V1"
+date-released: "2026"
+doi: "10.5281/zenodo.20568218"
+url: "https://doi.org/10.5281/zenodo.20568218"
+repository-code: "https://github.com/waleedgeo/GFSM"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: article
+  title: "Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data"
+  authors:
+    - family-names: Waleed
+      given-names: Mirza
+    - family-names: Sajjad
+      given-names: Muhammad
+    - family-names: Al-Ghamdi
+      given-names: Sami G.
+    - family-names: Gao
+      given-names: Meng
+  journal: "Nature Scientific Data"
+  year: 2026
+  notes: "Manuscript under review"

@@ -1,0 +1,7 @@
+value,class_name,description
+0,NoData,Masked or unavailable pixels including open water or missing input coverage
+1,Very Low,Very low flood susceptibility
+2,Low,Low flood susceptibility
+3,Moderate,Moderate flood susceptibility
+4,High,High flood susceptibility
+5,Very High,Very high flood susceptibility

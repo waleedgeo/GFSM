@@ -3,7 +3,8 @@
 The canonical GFSM v1 dataset archive is hosted on Zenodo:
 
 - DOI: https://doi.org/10.5281/zenodo.20568218
-- Version: V1
+- Data product: GFSM v1
+- Zenodo record version: v2
 - Google Earth Engine mirror: `projects/floodsus/assets/fsm_ei5`
 
 Use the Zenodo record to download the released GFSM GeoTIFF tile archives and accompanying metadata. The archive is expected to include global GeoTIFF tiles and a tile index that helps identify the files needed for a region of interest.

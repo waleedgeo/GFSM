@@ -10,18 +10,21 @@
   </p>
 
   <p>
-    <a href="https://gfsm.waleedgeo.com"><strong>Open GFSM Explorer</strong></a>
+    <a href="https://doi.org/10.1038/s41597-026-08338-1"><strong>Read the paper</strong></a>
     ·
-    <a href="https://doi.org/10.5281/zenodo.20568218"><strong>Zenodo DOI</strong></a>
+    <a href="https://gfsm.waleedgeo.com"><strong>Explore the map</strong></a>
     ·
-    <a href="data_access/gee_quickstart.js"><strong>GEE quickstart</strong></a>
+    <a href="https://zenodo.org/records/20568218"><strong>Download the data</strong></a>
     ·
-    <a href="examples/read_gfsm_tile_python.py"><strong>Python examples</strong></a>
+    <a href="#quickstart"><strong>Get started</strong></a>
   </p>
 
   <p>
+    <a href="https://doi.org/10.1038/s41597-026-08338-1">
+      <img src="https://img.shields.io/badge/Paper-Scientific%20Data-0b7285?style=flat-square" alt="Published in Scientific Data">
+    </a>
     <a href="https://doi.org/10.5281/zenodo.20568218">
-      <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20568218-blue?style=flat-square&logo=zenodo" alt="Zenodo DOI">
+      <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20568218.svg" alt="Zenodo dataset DOI">
     </a>
     <img src="https://img.shields.io/badge/Resolution-30%20m-2563eb?style=flat-square" alt="30 m resolution">
     <img src="https://img.shields.io/badge/Tiles-17%2C069-0f766e?style=flat-square" alt="17,069 tiles">
@@ -40,19 +43,21 @@
 
 ## What GFSM Provides
 
-GFSM v1 maps relative flood susceptibility at 30 m resolution using five globally consistent classes. It is designed for dataset access, regional screening, visualization, clipping, and lightweight reproducible summaries.
+GFSM v1 maps relative flood susceptibility at 30 m resolution using five globally consistent classes. The dataset and its validation are described in the open-access *Scientific Data* paper, [*A high-resolution global flood susceptibility dataset derived from multi-source earth observation and geospatial data*](https://doi.org/10.1038/s41597-026-08338-1), published online on 23 September 2026.
 
 This repository provides documentation, metadata, access instructions, compact validation metrics, Google Earth Engine scripts, Python examples, and minimal notebooks. Downstream flood-risk assessment with exposure and vulnerability layers is outside the scope of this repository.
 
-## Access
+## Key Resources
 
-| Resource | Identifier |
+| Resource | Access |
 | --- | --- |
-| Web app | https://gfsm.waleedgeo.com |
-| Zenodo dataset DOI | https://doi.org/10.5281/zenodo.20568218 |
+| Published paper | [Scientific Data](https://doi.org/10.1038/s41597-026-08338-1) |
+| Interactive dashboard | [GFSM Explorer](https://gfsm.waleedgeo.com) |
+| Dataset archive | [Zenodo record](https://zenodo.org/records/20568218) ([DOI](https://doi.org/10.5281/zenodo.20568218)) |
 | Google Earth Engine asset | `projects/floodsus/assets/fsm_ei5` |
+| Source repository | [github.com/waleedgeo/GFSM](https://github.com/waleedgeo/GFSM) |
 
-The Earth Engine asset is an `ImageCollection` containing approximately 17,000 GFSM 30 m tile images. The Zenodo record is the canonical dataset archive.
+The Earth Engine asset is an `ImageCollection` containing approximately 17,000 GFSM 30 m tile images. The Zenodo record is the canonical dataset archive. GFSM v1 is the data-product name; the linked Zenodo deposit is record version v2.
 
 ## At a Glance
 
@@ -60,6 +65,8 @@ The Earth Engine asset is an `ImageCollection` containing approximately 17,000 G
 | --- | --- |
 | Output product | Five-class EI-5 GeoTIFF tiles |
 | Spatial resolution | 30 m |
+| Coordinate reference system | World Mercator (EPSG:3395) |
+| Geographic coverage | Near-global land, approximately 80°N to 60°S |
 | Spatial tiles | 17,069 processed global tiles |
 | Modelling units | 192 country or country-climate units |
 | Training samples | Approximately 30.45 million |
@@ -127,10 +134,12 @@ GFSM/
 ├── metadata/             # Class legend, tile schema, variables, scope
 ├── examples/             # Lightweight Python scripts
 ├── notebooks/            # Minimal local-tile notebooks
-├── validation_summary/   # Manuscript-reported summary metrics
+├── validation_summary/   # Published summary metrics
 ├── docs/                 # Citation, limitations, FAQ, changelog
 ├── src/img/              # Logo and app screenshot
+├── CITATION.bib
 ├── CITATION.cff
+├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
 ```
@@ -154,7 +163,7 @@ Not included:
 
 ## Validation Summary
 
-The compact validation table in [`validation_summary/summary_metrics.csv`](validation_summary/summary_metrics.csv) reports the manuscript-level metrics intended for public reference. Internal ROC-AUC and AUPRC values describe discrimination against model-derived labels. DFO correspondence values provide independent event-based plausibility context.
+The compact validation table in [`validation_summary/summary_metrics.csv`](validation_summary/summary_metrics.csv) reports the paper-level metrics intended for public reference. Internal ROC-AUC and AUPRC values describe discrimination against model-derived labels. DFO correspondence values provide independent event-based plausibility context.
 
 ## Responsible Use
 
@@ -164,9 +173,24 @@ See [`docs/known_limitations.md`](docs/known_limitations.md) and [`docs/faq.md`]
 
 ## Citation
 
-If you use GFSM v1, cite both the dataset DOI and the manuscript when available.
+If you use GFSM v1, cite both the published paper and the dataset release.
 
-Dataset citation:
+**Paper**
+
+Waleed, M., Sajjad, M., Al-Ghamdi, S. G., & Gao, M. (2026). A high-resolution global flood susceptibility dataset derived from multi-source earth observation and geospatial data. *Scientific Data*. https://doi.org/10.1038/s41597-026-08338-1
+
+```bibtex
+@article{waleed2026gfsm,
+  author  = {Waleed, Mirza and Sajjad, Muhammad and Al-Ghamdi, Sami G. and Gao, Meng},
+  title   = {A high-resolution global flood susceptibility dataset derived from multi-source earth observation and geospatial data},
+  journal = {Scientific Data},
+  year    = {2026},
+  doi     = {10.1038/s41597-026-08338-1},
+  url     = {https://doi.org/10.1038/s41597-026-08338-1}
+}
+```
+
+**Dataset**
 
 Waleed, M. (2026). Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20568218
 
@@ -176,25 +200,13 @@ Waleed, M. (2026). Global Flood Susceptibility Map (GFSM v1): A high resolution 
   title        = {{Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data}},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {V1},
+  version      = {v2},
   doi          = {10.5281/zenodo.20568218},
   url          = {https://doi.org/10.5281/zenodo.20568218}
 }
 ```
 
-Manuscript citation placeholder:
-
-```bibtex
-@article{waleed2026gfsm,
-  title   = {Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data},
-  author  = {Waleed, Mirza and Sajjad, Muhammad and Al-Ghamdi, Sami G. and Gao, Meng},
-  journal = {Nature Scientific Data},
-  year    = {2026},
-  note    = {Manuscript under review}
-}
-```
-
-Machine-readable citation metadata is provided in [`CITATION.cff`](CITATION.cff).
+Copy-ready BibTeX is available in [`CITATION.bib`](CITATION.bib), and GitHub-compatible machine-readable metadata is provided in [`CITATION.cff`](CITATION.cff). See [`docs/data_citation.md`](docs/data_citation.md) for citation guidance.
 
 ## Related Work
 
@@ -226,6 +238,6 @@ Unless otherwise noted, GFSM data, metadata, and documentation are licensed unde
   </p>
 
   <p>
-    For dataset access questions, citation updates, or GFSM web-app issues, use the contact links above.
+    For dataset access questions or GFSM dashboard issues, use the contact links above. For reproducible bug reports and contributions, see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.
   </p>
 </div>

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the GFSM paper
+    url: https://doi.org/10.1038/s41597-026-08338-1
+    about: Review the published methods, validation, and usage notes.
+  - name: Download GFSM v1
+    url: https://zenodo.org/records/20568218
+    about: Access the canonical dataset archive and tile index.
+  - name: Explore GFSM
+    url: https://gfsm.waleedgeo.com
+    about: Open the interactive GFSM dashboard.

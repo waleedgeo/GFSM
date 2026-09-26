@@ -1,34 +1,44 @@
 cff-version: 1.2.0
-message: "If you use GFSM v1, please cite the dataset DOI and the associated manuscript when available."
+message: "If you use GFSM v1, please cite the published Scientific Data paper and the Zenodo dataset release."
 title: "Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data"
 type: dataset
 authors:
   - family-names: Waleed
     given-names: Mirza
-  - family-names: Sajjad
-    given-names: Muhammad
-  - family-names: Al-Ghamdi
-    given-names: Sami G.
-  - family-names: Gao
-    given-names: Meng
-version: "V1"
-date-released: "2026"
+    orcid: "https://orcid.org/0000-0003-0006-2490"
+version: "v2"
+date-released: "2026-06-06"
 doi: "10.5281/zenodo.20568218"
 url: "https://doi.org/10.5281/zenodo.20568218"
 repository-code: "https://github.com/waleedgeo/GFSM"
 license: "CC-BY-4.0"
+abstract: >-
+  GFSM v1 is a globally harmonized 30 m flood susceptibility dataset derived
+  from multi-source Earth observation and geospatial data using a machine
+  learning framework. The released EI-5 product provides five susceptibility
+  classes across near-global land areas.
+keywords:
+  - flood susceptibility
+  - Earth observation
+  - geospatial data
+  - machine learning
+  - global dataset
 preferred-citation:
   type: article
-  title: "Global Flood Susceptibility Map (GFSM v1): A high resolution (30m) flood susceptibility dataset derived from multi-source Earth observation and geospatial data"
+  title: "A high-resolution global flood susceptibility dataset derived from multi-source earth observation and geospatial data"
   authors:
     - family-names: Waleed
       given-names: Mirza
+      orcid: "https://orcid.org/0000-0003-0006-2490"
     - family-names: Sajjad
       given-names: Muhammad
     - family-names: Al-Ghamdi
       given-names: Sami G.
+      orcid: "https://orcid.org/0000-0002-7416-5153"
     - family-names: Gao
       given-names: Meng
-  journal: "Nature Scientific Data"
+  journal: "Scientific Data"
   year: 2026
-  notes: "Manuscript under review"
+  month: 9
+  doi: "10.1038/s41597-026-08338-1"
+  url: "https://doi.org/10.1038/s41597-026-08338-1"

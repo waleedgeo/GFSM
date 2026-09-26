@@ -14,4 +14,4 @@ GFSM v1 is based on geospatial flood conditioning factors that describe topograp
 | DistRd | Distance to roads | Distance from mapped roads, used as an anthropogenic spatial proxy. |
 | RainFq | Rainfall frequency | Frequency metric derived from precipitation observations or products. |
 
-These definitions summarize the public manuscript-level variables. They do not document private preprocessing workflows or downstream flood-risk assessment analyses.
+These definitions summarize the variables documented in the published paper. They do not document private preprocessing workflows or downstream flood-risk assessment analyses.

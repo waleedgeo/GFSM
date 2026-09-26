@@ -9,7 +9,7 @@ This repository supports the public GFSM v1 dataset release. It includes documen
 - Class legend and NoData explanation.
 - Tile schema and tile-index usage guidance.
 - Lightweight Python examples for local GeoTIFF tiles.
-- Compact validation metrics reported in the manuscript.
+- Compact validation metrics reported in the published paper.
 - Limitations and responsible-use notes.
 
 ## Excluded
@@ -18,7 +18,7 @@ This repository supports the public GFSM v1 dataset release. It includes documen
 - Population, assets, or infrastructure overlay analyses.
 - Flood-risk scoring or ranking workflows.
 - Country rankings, hotspot rankings, or damage estimates.
-- Draft figures, notebooks, or conclusions for downstream risk-assessment manuscripts.
+- Draft figures, notebooks, or conclusions for downstream risk-assessment studies.
 - Private intermediate data, model outputs, or large geospatial files.
 
 GFSM v1 is a susceptibility product. Downstream flood-risk assessment using exposure and vulnerability layers is outside the scope of this repository.

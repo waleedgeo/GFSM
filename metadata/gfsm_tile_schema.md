@@ -18,7 +18,7 @@ The Zenodo archive uses GFSM tile package names such as `GFSM_N20W020.zip`. Indi
 | NoData | 0 |
 | Valid classes | 1, 2, 3, 4, 5 |
 | Class meaning | Very Low, Low, Moderate, High, Very High flood susceptibility |
-| CRS | Inspect per-tile metadata; use equal-area reprojection for rigorous area estimates |
+| CRS | World Mercator (EPSG:3395); use an appropriate equal-area CRS for rigorous area estimates |
 
 ## Coverage Notes
 

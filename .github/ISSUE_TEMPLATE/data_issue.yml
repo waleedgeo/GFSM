@@ -1,0 +1,50 @@
+name: Data issue
+description: Report a possible problem with a GFSM tile, class value, or coverage area.
+title: "[Data]: "
+labels:
+  - data
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve GFSM. Please provide enough spatial and technical detail to reproduce the issue.
+  - type: input
+    id: location
+    attributes:
+      label: Location or tile
+      description: Provide coordinates, a bounding box, place name, or GFSM tile/archive name.
+      placeholder: "For example: 23.7 N, 90.4 E or GFSM_N20E080.zip"
+    validations:
+      required: true
+  - type: dropdown
+    id: access_route
+    attributes:
+      label: Access route
+      options:
+        - Zenodo GeoTIFF
+        - Google Earth Engine
+        - GFSM dashboard
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Describe the observed value or behavior and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction details
+      description: Include relevant commands, code, software versions, and preprocessing steps. Do not upload large raster files.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I reviewed the FAQ and known limitations.
+          required: true
+        - label: I have not included private or sensitive data.
+          required: true

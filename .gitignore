@@ -18,6 +18,8 @@ project.md
 *.npz
 *.npy
 
+.unpublished/
+
 # Notebook checkpoints
 .ipynb_checkpoints/
 

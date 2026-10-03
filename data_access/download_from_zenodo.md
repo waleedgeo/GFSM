@@ -18,3 +18,13 @@ Recommended workflow:
 5. Cite the Zenodo DOI in derived products and publications.
 
 Do not commit downloaded GeoTIFFs, compressed tile archives, shapefiles, or other large geospatial data into this GitHub repository.
+
+## Location downloads in GFSM Explorer
+
+The local GFSM Explorer source now supports a location download lookup. Once that source is published, clicking a location will use the released tile index to identify the regional ZIP that covers the clicked tile. It will show the tile ID, exact ZIP filename, and approximate ZIP size below the download link. ZIP sizes are rounded from the exact byte counts in the [v2 archive manifest](zenodo_v2_archives.csv). A regional ZIP contains many native 30 m tiles; the app's display-resolution selector does not change the downloaded files. Individual tile files are inside the ZIPs and are not offered as separate Zenodo downloads.
+
+The app queries the Earth Engine table `projects/floodsus/assets/GFSM_Tile_Index_v1`. Its shapefile-derived fields `tile_id` and `zip_filena` correspond to the GeoPackage fields `tile_id` and `zip_filename`. The app accepts a ZIP name only if it appears in the v2 manifest, then links to that file on Zenodo record `20568218`. It shows all distinct archive matches at a boundary and keeps a quieter full-record link below the location inspector.
+
+After a click, the map draws a cyan bounding outline around the indexed tiles in the selected ZIP. The rectangle's interior stays transparent: it shows the ZIP's tile extent, not continuous data coverage. If several ZIPs meet at the point, use the inspector's selector to change which ZIP area is shown. The Zoom button frames the shown ZIP area. A new click or Reset clears the overlay.
+
+To refresh the manifest for this release, run `python data_access/build_zenodo_manifest.py` from the repository root. The script reads the Zenodo record API, checks every regional ZIP name against the local `GFSM_Tile_Index_v1.gpkg`, verifies the local index ZIP checksum when present, writes the CSV, and updates the generated size lookup in the local Earth Engine app source at `.unpublished/gee_gfsm_app_codes.js`. Pass `--record-json PATH` to use a saved API response. When changing releases, update the record ID and index asset deliberately and validate the new file list before publishing the app.
